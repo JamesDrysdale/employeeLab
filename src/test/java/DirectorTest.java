@@ -19,6 +19,16 @@ public class DirectorTest {
     }
 
     @Test
+    public void canSetName(){
+        director.setName("Lauren");
+        assertEquals("Lauren", director.getName());
+        director.setName(null);
+        assertEquals("Lauren", director.getName());
+        director.setName("");
+        assertEquals("Lauren", director.getName());
+    }
+
+    @Test
     public void hasANI(){
         assertEquals("9876NI", director.getNI());
     }

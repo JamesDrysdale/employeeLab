@@ -18,6 +18,16 @@ public class ManagerTest {
     }
 
     @Test
+    public void canSetName(){
+        manager.setName("Billy");
+        assertEquals("Billy", manager.getName());
+        manager.setName(null);
+        assertEquals("Billy", manager.getName());
+        manager.setName("");
+        assertEquals("Billy", manager.getName());
+    }
+
+    @Test
     public void hasANI(){
         assertEquals("1234NI", manager.getNI());
     }

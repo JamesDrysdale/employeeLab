@@ -19,6 +19,16 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void canSetName(){
+        databaseAdmin.setName("Lauren");
+        assertEquals("Lauren", databaseAdmin.getName());
+        databaseAdmin.setName(null);
+        assertEquals("Lauren", databaseAdmin.getName());
+        databaseAdmin.setName("");
+        assertEquals("Lauren", databaseAdmin.getName());
+    }
+
+    @Test
     public void hasANI(){
         assertEquals("12345NI", databaseAdmin.getNI());
     }

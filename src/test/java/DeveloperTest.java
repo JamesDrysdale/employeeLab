@@ -19,6 +19,16 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canSetName(){
+        developer.setName("John");
+        assertEquals("John", developer.getName());
+        developer.setName(null);
+        assertEquals("John", developer.getName());
+        developer.setName("");
+        assertEquals("John", developer.getName());
+    }
+
+    @Test
     public void hasANI(){
         assertEquals("123456NI", developer.getNI());
     }
