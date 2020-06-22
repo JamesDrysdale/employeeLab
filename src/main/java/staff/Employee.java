@@ -3,7 +3,7 @@ package staff;
 public abstract class Employee {
     private String name;
     private String NI;
-    private double salary;
+    protected double salary;
 
     public Employee(String name, String NI, double salary){
         this.name = name;
